@@ -1,0 +1,151 @@
+.overlay
+	display: none
+	flex-direction: column
+	justify-content: flex-start
+	align-items: flex-start
+	position: absolute
+	padding: 16px
+	top: 0
+	left: 0
+	z-index: 1000
+	background: #fff
+	width: 300px
+	height: auto
+	transition: all 1s ease
+
+
+.hamburger
+	width: 35px
+	height: 35px
+	mask-image: url(#{$assetImages}/hamburger--icon__2.svg)
+	mask-repeat: no-repeat
+	mask-position: 0px 0px
+	background: #000
+	margin-right: 7px
+	&:hover
+		transition: background .1s ease
+		background: $accent
+.cross
+	width: 23px
+	height: 23px
+	mask-image: url(#{$assetImages}/cross--icon.svg)
+	mask-repeat: no-repeat
+	mask-position: 0px 0px
+	background: #000
+	margin-right: 7px
+	&:hover
+		transition: background .1s ease
+		background: $accent
+.news__sidebar
+	position: relative
+	width: 100%
+	display: flex
+	flex-flow: column nowrap
+.news__sidebar__wrapp
+	position: relative
+	display: flex
+	justify-content: flex-start
+	align-items: flex-start
+	width: 100%
+	border-top: 1px solid #E4E4E4
+	margin-top: 20px
+.news
+	position: relative
+	display: flex
+	justify-content: flex-start
+	align-items: flex-start
+	flex-flow: column nowrap
+	width: 100%
+.section__news
+	.container
+		flex-flow: row nowrap
+		justify-content: flex-start
+		align-items: flex-start
+	.event__documents
+		grid-template-columns: repeat( auto-fit, minmax(346px, 1fr,) )  
+.news__documents__wrap
+	display: flex
+	position: relative
+	justify-content: flex-start
+	align-items: flex-start
+	width: 100%
+.news__documents__shaddom
+	display: none
+	height: 100%
+	width: 100px
+	background: #000
+	position: relative	
+.news__bg__one
+	background-image: url(#{$assetImages}/event__bg__two.png)
+
+.news__sidebar__item
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	padding: 20px 0
+	min-height: 45px
+	font-weight: 500
+	font-size: 16px
+	width: 100%
+	line-height: 19px
+	border-bottom: 1px solid #E4E4E4
+.sidebar__levelTwo__details
+	position: relative
+	width: 100%
+	height: 100%
+.sidebar__levelTwo__details[open]
+	.sidebar__levelTwo__summary
+		&::after
+			margin-right: 7px
+			content: url("#{$assetImages}/summary__close.svg")
+			animation-name: rotationOpen
+			animation-duration: .2s
+			animation-iteration-count: 1
+			animation-timing-function: linear
+			animation-fill-mode: forwards
+.sidebar__levelTwo__summary
+	position: relative
+	display: flex
+	justify-content: space-between
+	align-items: center
+	width: 100%
+	height: 100%
+	cursor: pointer
+	&::marker
+		list-style: none 
+		display: none
+	&::after
+		margin-right: 7px
+		content: url("#{$assetImages}/summary__close.svg")
+		animation-name: rotationClose
+		animation-duration: .2s
+		animation-iteration-count: 1
+		animation-timing-function: linear
+		animation-fill-mode: forwards
+.sidebar__levelTwo__item
+	position: relative
+	width: 100%
+	height: 100%
+	padding: 10px
+.news__sidebar__levelTwo
+	padding: 10px 0
+.news__sidebar__link
+	position: relative
+	display: flex
+	justify-content: flex-start
+	align-items: center
+	width: 100%
+	height: 100%
+@keyframes rotationOpen 
+	0% 
+		transform: rotate(0deg)
+	100% 
+		transform: rotate(180deg)
+
+@keyframes rotationClose
+	0% 
+		transform: rotate(180deg)
+	100% 
+		transform: rotate(0deg)
+
+

@@ -1,0 +1,125 @@
+// USER VARIABLES SECTION
+
+$accent: #76b82a // Accent Color
+$accent2: #f0869d // Accent Color
+$accent3: #ffe271 // Accent Color
+$fontsize: 20 px // Body Font Size
+$textcolor: #000000 // Text Color
+$textcolor2: #878575 // Text Color
+$lineheight: 28px // Document Line Height
+$userfont: FiraSans, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 33px
+$gutter: $grid-gutter-width 
+$gutterSection: $gutter*2
+$px: "+px"
+$assetImages: "../images/dist"
+// mask-image: url(#{$assetImages}/facebook--icon.svg)
+// IMPORT SECTION
+
+// @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+// @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
+@import 'node_modules/swiper/swiper-bundle'
+
+// FONTS LOAD SECTION
+	
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+=keyframes($name)
+	@-webkit-keyframes #{$name}
+		@content
+	@-moz-keyframes #{$name}
+		@content
+	@-ms-keyframes #{$name}
+		@content
+	@keyframes #{$name}
+		@content
+
+// @keyframes rotationOpen 
+// 	0% 
+// 		transform: rotate(0deg)
+// 	100% 
+// 		transform: rotate(180deg)
+// animation-name: rotationClose
+// animation-duration: .2s
+// animation-iteration-count: 1
+// animation-timing-function: linear
+// animation-fill-mode: forwards
+
+// @keyframes rotationClose
+// 	0% 
+// 		transform: rotate(180deg)
+// 	100% 
+// 		transform: rotate(0deg)
+// animation-name: rotationClose
+// animation-duration: .2s
+// animation-iteration-count: 1
+// animation-timing-function: linear
+// animation-fill-mode: forwards
+
+
+/*
+// font-weight helper
+// 100 - Thin (Hairline)
+// 200 - Extra Light (Ultra Light)
+// 300 - Light
+// 400 - Regular (Normal)
+// 500 - Medium
+// 600 - Semi Bold (Demi Bold)
+// 700 - Bold
+// 800 - Extra Bold (Ultra Bold)
+// 900 - Black (Heavy)
+
+@include font('FiraSans', normal, 400, '../fonts/FiraSans/FiraSansRegular.woff')
+@include font('FiraSans', medium, 500, '../fonts/FiraSans/FiraSansMedium.woff')
+@include font('FiraSans', light, 400, '../fonts/FiraSans/FiraSansLight.woff')
+@include font('FiraSans', bold, 700, '../fonts/FiraSans/FiraSansBold.woff')
+
+
+
+
+// GENERAL CSS SETTINGS
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+ul
+	li
+		list-style-type: none
+::placeholder
+	color: #666
+
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	box-sizing: border-box
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+a
+	text-decoration: none
+	color: $textcolor
+	transition: all .3s
+	&:hover
+		color: $accent
